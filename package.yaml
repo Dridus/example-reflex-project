@@ -1,0 +1,52 @@
+name:                myawesomeclient
+version:             0.0.1
+synopsis:            It's a client!
+description:         Please see README.md
+homepage:            https://github.com/ConferHealth
+license:             BSD3
+author:              Confer Health
+maintainer:          oss@confer.care
+copyright:           2017 Confer Health
+
+default-extensions:
+  - DataKinds
+  - DeriveGeneric
+  - DeriveLift
+  - FlexibleContexts
+  - FlexibleInstances
+  - FunctionalDependencies
+  - GeneralizedNewtypeDeriving
+  - LambdaCase
+  - MultiParamTypeClasses
+  - NamedFieldPuns
+  - NoImplicitPrelude
+  - OverloadedStrings
+  - PatternSynonyms
+  - RecordWildCards
+  - ScopedTypeVariables
+  - StandaloneDeriving
+  - TemplateHaskell
+  - TypeApplications
+  - TypeFamilies
+  - TypeOperators
+
+dependencies:
+  - base
+  - classy-prelude
+  - reflex-dom
+
+ghc-options:
+  - -Wall
+  - -Werror
+  - -funbox-strict-fields
+  - -O2
+
+executables:
+  myawesomeclient-exe:
+    source-dirs:      app
+    main:             Main.hs
+    ghc-options:      -threaded -rtsopts -with-rtsopts=-N
+    dependencies:     myawesomeclient
+
+library:
+  source-dirs:        src
