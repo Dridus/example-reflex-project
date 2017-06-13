@@ -1,11 +1,8 @@
-{ reflex-platform ? import ./reflex-platform {}, ... }:
+{ reflex-platform ? import ./reflex-platform {}
+, base-platform ? reflex-platform.ghcjs
+, ... }:
 
-with {
-  inherit (reflex-platform.nixpkgs) fetchgitPrivate;
-  inherit (builtins) fromJSON readFile;
-};
-
-reflex-platform.ghcjs.override {
+base-platform.override {
   overrides = self: super: {
     # myawesomeshared        = self.callPackage ../shared/package.nix {};
   };
