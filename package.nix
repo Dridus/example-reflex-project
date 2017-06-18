@@ -7,7 +7,7 @@ mkDerivation {
   isExecutable = true;
   libraryHaskellDepends = [ base classy-prelude reflex-dom ];
   executableHaskellDepends = [ base classy-prelude reflex-dom ];
-  homepage = "https://github.com/ConferHealth";
+  homepage = "https://github.com/Dridus";
   description = "It's a client!";
   license = stdenv.lib.licenses.bsd3;
 }
